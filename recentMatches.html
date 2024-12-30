@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Matches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text color */
+        }
+
+        header {
+            background-color: #5c2c91; /* Lighter purple for header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff; /* White text for header */
+        }
+
+        nav {
+            background-color: #ffffff; /* White background for nav */
+            border-bottom: 2px solid #5c2c91; /* Purple accent border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 50px; /* Set nav height to 50px */
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #5c2c91; /* Purple links */
+            padding: 10px 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #5c2c91; /* Purple background */
+            color: #ffffff; /* White text on hover */
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .search-container {
+            position: relative;
+            text-align: right;
+            margin: 10px 10%;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 300px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #5c2c91;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-container button:hover {
+            background-color: #43206a;
+        }
+
+        .selected-conditions {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #5c2c91;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* White background for table */
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #5c2c91; /* Purple header */
+            color: #ffffff; /* White text for header */
+            font-size: 1.2em;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light alternate row */
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1; /* Highlight row on hover */
+        }
+
+        table a {
+            color: #5c2c91;
+            text-decoration: none;
+        }
+
+        table a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LOL Esports Tournaments</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recent-matches.html">Recent Matches</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="champions.html">Champions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Recent Matches</h2>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter conditions and press Enter">
+            <button onclick="addCondition()">Add Condition</button>
+        </div>
+
+        <div class="selected-conditions" id="conditionsDisplay">
+            <!-- Display selected conditions here -->
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Match Name</th>
+                    <th>Teams</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">2024 LEC Summer Split</a></td>
+                    <td>G2 vs FNC</td>
+                    <td>3 - 2</td>
+                    <td>2024-06-15</td>
+                </tr>
+                <tr>
+                    <td><a href="#">2024 LCK Spring Split</a></td>
+                    <td>T1 vs GEN</td>
+                    <td>3 - 1</td>
+                    <td>2024-04-01</td>
+                </tr>
+                <tr>
+                    <td><a href="#">2024 Mid-Season Invitational</a></td>
+                    <td>DK vs RNG</td>
+                    <td>1 - 2</td>
+                    <td>2024-05-10</td>
+                </tr>
+                <tr>
+                    <td><a href="#">2024 World Championship</a></td>
+                    <td>EDG vs TES</td>
+                    <td>3 - 0</td>
+                    <td>2024-11-01</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        const conditions = [];
+
+        function addCondition() {
+            const input = document.getElementById('searchInput').value.trim();
+            const display = document.getElementById('conditionsDisplay');
+
+            if (input !== '') {
+                conditions.push(input);
+                document.getElementById('searchInput').value = '';
+            }
+
+            if (conditions.length === 0) {
+                display.textContent = 'No search conditions applied.';
+            } else {
+                display.textContent = `Search conditions: ${conditions.join(', ')}`;
+            }
+        }
+    </script>
+</body>
+</html>
