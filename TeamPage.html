@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page - LOL Esports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; 
+            color: #333;
+        }
+
+        header {
+            background-color: #5c2c91;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #5c2c91;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #5c2c91;
+            color: #ffffff;
+        }
+
+        .highlight {
+            color: #5c2c91;
+            font-weight: bold;
+        }
+
+        .vertical-table td {
+            font-weight: bold;
+        }
+
+        .vertical-table td img {
+            width: 200px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Team Page</h1>
+    </header>
+
+    <main>
+        <!-- 팀 프로필 -->
+        <h2>Team Profile</h2>
+        <table class="vertical-table">
+            <tr>
+                <td>Logo</td>
+                <td><img src="img\TeamLogo\T1_Logo.png" alt="Team Logo"></td>
+            </tr>
+            <tr>
+                <td>Team Name</td>
+                <td class="highlight">Team Name</td>
+            </tr>
+            <tr>
+                <td>League</td>
+                <td>LCK</td>
+            </tr>
+            <tr>
+                <td>Championships</td>
+                <td>3 Championships</td>
+            </tr>
+        </table>
+
+        <!-- 최근 경기 -->
+        <h2>Recent Matches</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Result</th>
+                <th>Tournament</th>
+                <th>Match</th>
+            </tr>
+            <tr>
+                <td>2025-01-05</td>
+                <td><a href="">Opponent A</a></td>
+                <td>Win</td>
+                <td><a href="">World Championship</a></td>
+                <td><a href="">match xx</a></td>
+            </tr>
+            <tr>
+                <td>2025-01-02</td>
+                <td><a href="">Opponent B</a></td>
+                <td>Lose</td>
+                <td><a href="">LCK Spring</a></td>
+                <td><a href="">match xx</a></td>
+            </tr>
+            <tr>
+                <td>2025-01-02</td>
+                <td><a href="">Opponent B</a></td>
+                <td>Lose</td>
+                <td><a href="">LCK Spring</a></td>
+                <td><a href="">match xx</a></td>
+            </tr>
+        </table>
+
+        <!-- 소속 선수 -->
+        <h2>Team Roster</h2>
+        <table>
+            <tr>
+                <th>Position</th>
+                <th>Nickname</th>
+            </tr>
+            <tr>
+                <td>Top</td>
+                <td class="highlight">Player1</td>
+            </tr>
+            <tr>
+                <td>Jungle</td>
+                <td class="highlight">Player2</td>
+            </tr>
+            <tr>
+                <td>Mid</td>
+                <td class="highlight">Player3</td>
+            </tr>
+            <tr>
+                <td>Bot lane</td>
+                <td class="highlight">Player4</td>
+            </tr>
+            <tr>
+                <td>Supporter</td>
+                <td class="highlight">Player5</td>
+            </tr>
+            <tr>
+                <td>Coach</td>
+                <td class="highlight">CoachName</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
