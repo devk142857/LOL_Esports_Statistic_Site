@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Teams - LOL Esports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #5c2c91;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 2px solid #5c2c91;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #5c2c91;
+            padding: 10px 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #5c2c91;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #5c2c91;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .team-category {
+            margin-bottom: 40px;
+        }
+
+        .team-category h3 {
+            color: #5c2c91;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            width: 20%;
+            height: 100px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        img {
+            width: 30%;
+        }
+
+        .team-name {
+            color: #5c2c91;
+            font-weight: bold;
+            margin-top: 5px;
+            display: block;
+        }
+
+        a.team-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>All Teams</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="recentMatches.html">Recent Matches</a></li>
+            <li><a href="team.html">Teams</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="champions.html">Champions</a></li>
+            <li><a href="banPick.html">Ban/Pick</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Explore Teams by Region</h2>
+
+        <div class="team-category">
+            <h3>LCK (Korea)</h3>
+            <table>
+                <tr>
+                    <td><a href="teamPages/T1.html" class="team-link"><img src="img\TeamLogo\T1_Logo.png" alt="T1 Logo"><span class="team-name">T1</span></a></td>
+                    <td><a href="teamPages/GenG.html" class="team-link"><img src="img/teams/LCK_GEN.png" alt="Gen.G Logo"><span class="team-name">Gen.G</span></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="team-category">
+            <h3>LPL (China)</h3>
+            <table>
+                <tr>
+                    <td><a href="teamPages/EDG.html" class="team-link"><img src="img/teams/LPL_EDG.png" alt="EDG Logo"><span class="team-name">EDward Gaming</span></a></td>
+                    <td><a href="teamPages/RNG.html" class="team-link"><img src="img/teams/LPL_RNG.png" alt="RNG Logo"><span class="team-name">Royal Never Give Up</span></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="teamPages/EDG.html" class="team-link"><img src="img/teams/LPL_EDG.png" alt="EDG Logo"><span class="team-name">EDward Gaming</span></a></td>
+                    <td><a href="teamPages/RNG.html" class="team-link"><img src="img/teams/LPL_RNG.png" alt="RNG Logo"><span class="team-name">Royal Never Give Up</span></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="team-category">
+            <h3>LEC (Europe)</h3>
+            <table>
+                <tr>
+                    <td><a href="teamPages/G2.html" class="team-link"><img src="img/teams/LEC_G2.png" alt="G2 Logo"><span class="team-name">G2 Esports</span></a></td>
+                    <td><a href="teamPages/FNC.html" class="team-link"><img src="img/teams/LEC_FNC.png" alt="Fnatic Logo"><span class="team-name">Fnatic</span></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="team-category">
+            <h3>LCS (North America)</h3>
+            <table>
+                <tr>
+                    <td><a href="teamPages/Cloud9.html" class="team-link"><img src="img/teams/LCS_C9.png" alt="Cloud9 Logo"><span class="team-name">Cloud9</span></a></td>
+                    <td><a href="teamPages/TeamLiquid.html" class="team-link"><img src="img/teams/LCS_TL.png" alt="Team Liquid Logo"><span class="team-name">Team Liquid</span></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
