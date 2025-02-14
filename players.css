@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -65,7 +64,7 @@ h2 {
     text-align: center;
 }
 
-.champion-list table {
+table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
@@ -73,22 +72,23 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-td {
-    width: 10%;
-    height: 150px;
-    text-align: center;
-    border: 1px solid #ddd;
+th, td {
     padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
+th {
+    background-color: #5c2c91;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.champion-name {
+td {
+    color: #333;
+}
+
+.highlight {
     color: #5c2c91;
     font-weight: bold;
 }

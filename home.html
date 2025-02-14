@@ -4,110 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOL Esports Tournaments</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Light gray background */
-            color: #333; /* Dark text color */
-        }
-
-        header {
-            background-color: #5c2c91; /* Lighter purple for header */
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #ffffff; /* White text for header */
-        }
-
-        nav {
-            background-color: #ffffff; /* White background for nav */
-            border-bottom: 2px solid #5c2c91; /* Purple accent border */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            height: 50px; /* Set nav height to 50px */
-            display: flex;
-            align-items: center; /* Center items vertically */
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #5c2c91; /* Purple links */
-            padding: 10px 15px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #5c2c91; /* Purple background */
-            color: #ffffff; /* White text on hover */
-            border-radius: 5px;
-        }
-
-        main {
-            display: flex;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: #ffffff; /* White sidebar */
-            border-right: 2px solid #5c2c91; /* Purple accent border */
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar h2 {
-            font-size: 1.5em;
-            color: #5c2c91; /* Purple accent for sidebar headings */
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 15px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #5c2c91; /* Purple links */
-            transition: color 0.3s;
-        }
-
-        .sidebar ul li a:hover {
-            color: #333; /* Dark color on hover */
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .content h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="home.js">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <header>
@@ -128,17 +26,15 @@
     <main>
         <div class="sidebar">
             <h2>Recent Tournaments</h2>
-            <ul>
-                <li><a href="#">World Championship 2024</a></li>
-                <li><a href="#">Mid-Season Invitational 2024</a></li>
-                <li><a href="#">LCK Summer Split 2024</a></li>
-                <li><a href="#">LEC Spring Split 2024</a></li>
-            </ul>
+            <div class="match-list">
+                <!--match list-->
+            </div>
         </div>
         <div class="content">
             <h2>Welcome to LOL Esports</h2>
             <p>Stay updated with the latest information about League of Legends tournaments, including schedules, results, and team updates. Explore the links on the left to dive into recent events.</p>
         </div>
     </main>
+    <script src="home.js"></script>
 </body>
 </html>
